@@ -4,18 +4,13 @@ import * as THREE from "../../libs/three.js/build/three.module.js";
 export const ClassificationScheme = {
 
 	DEFAULT: {
-		0:       { visible: true, name: 'never classified'  , color: [0.5,  0.5,  0.5,  1.0] },
-		1:       { visible: true, name: 'unclassified'      , color: [0.5,  0.5,  0.5,  1.0] },
-		2:       { visible: true, name: 'ground'            , color: [0.63, 0.32, 0.18, 1.0] },
-		3:       { visible: true, name: 'low vegetation'    , color: [0.0,  1.0,  0.0,  1.0] },
-		4:       { visible: true, name: 'medium vegetation' , color: [0.0,  0.8,  0.0,  1.0] },
-		5:       { visible: true, name: 'high vegetation'   , color: [0.0,  0.6,  0.0,  1.0] },
-		6:       { visible: true, name: 'building'          , color: [1.0,  0.66, 0.0,  1.0] },
-		7:       { visible: true, name: 'low point(noise)'  , color: [1.0,  0.0,  1.0,  1.0] },
-		8:       { visible: true, name: 'key-point'         , color: [1.0,  0.0,  0.0,  1.0] },
-		9:       { visible: true, name: 'water'             , color: [0.0,  0.0,  1.0,  1.0] },
-		12:      { visible: true, name: 'overlap'           , color: [1.0,  1.0,  0.0,  1.0] },
-		DEFAULT: { visible: true, name: 'default'           , color: [0.3,  0.6,  0.6,  0.5] },
+		0:       { visible: true, name: 'background', color: [0.7, 0.7, 0.7,  1.0] },
+		1:       { visible: true, name: 'control point', color: [152 / 255, 78 / 255, 163 / 255,  1.0] },
+		2:       { visible: true, name: 'vegetation', color: [77 / 255, 175 / 255, 74 / 255, 1.0] },
+		3:       { visible: true, name: 'efflorescence', color: [55 / 255, 126 / 255, 184 / 255,  1.0] },
+		4:       { visible: true, name: 'corrosion', color: [255 / 255, 255 / 255, 51 / 255,  1.0] },
+		5:       { visible: true, name: 'spalling', color: [255 / 255, 127 / 255, 0 / 255,  1.0] },
+		6:       { visible: true, name: 'crack', color: [228 / 255, 26 / 255, 28 / 255,  1.0] }
 	}
 };
 

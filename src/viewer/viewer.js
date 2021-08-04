@@ -301,11 +301,13 @@ export class Viewer extends EventDispatcher{
 			this.setEDLOpacity(1.0);
 			this.setClipTask(ClipTask.HIGHLIGHT);
 			this.setClipMethod(ClipMethod.INSIDE_ANY);
-			this.setPointBudget(1*1000*1000);
+			this.setPointBudget(200000);
 			this.setShowBoundingBox(false);
 			this.setFreeze(false);
 			this.setControls(this.orbitControls);
-			this.setBackground('gradient');
+			this.setBackground('skybox');
+
+      this.useHQ = true;
 
 			this.scaleFactor = 1;
 
@@ -468,7 +470,7 @@ export class Viewer extends EventDispatcher{
 		}
 
 		if(bg === "skybox"){
-			this.skybox = Utils.loadSkybox(new URL(Potree.resourcePath + '/textures/skybox2/').href);
+			this.skybox = Utils.loadSkybox(new URL(Potree.resourcePath + '/textures/skybox_custom/').href);
 		}
 
 		this.background = bg;
