@@ -2,6 +2,7 @@
 export * from "./Actions.js";
 export * from "./AnimationPath.js";
 export * from "./Annotation.js";
+export * from "./WidthAnnotation.js";
 export * from "./defines.js";
 export * from "./Enum.js";
 export * from "./EventDispatcher.js";
