@@ -539,6 +539,11 @@ export class Sidebar{
 			if(object){
 				object.visible = false;
 			}
+
+      // ... and all children
+      for (let elem of data.node.children){
+        $("#jstree_scene").jstree("uncheck_node", elem);
+      }
 		});
 
 		tree.on("check_node.jstree", (e, data) => {
@@ -547,6 +552,11 @@ export class Sidebar{
 			if(object){
 				object.visible = true;
 			}
+
+      // ... and all children
+      for (let elem of data.node.children){
+        $("#jstree_scene").jstree("check_node", elem);
+      }
 		});
 
 
