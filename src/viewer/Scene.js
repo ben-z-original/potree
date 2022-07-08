@@ -1,6 +1,7 @@
 
 import * as THREE from "../../libs/three.js/build/three.module.js";
 import {Annotation} from "../Annotation.js";
+import {WidthAnnotation} from "../WidthAnnotation.js";
 import {CameraMode} from "../defines.js";
 import {View} from "./View.js";
 import {Utils} from "../utils.js";
@@ -13,6 +14,7 @@ export class Scene extends EventDispatcher{
 		super();
 
 		this.annotations = new Annotation();
+		this.width_annotations = new WidthAnnotation();
 		
 		this.scene = new THREE.Scene();
 		this.sceneBG = new THREE.Scene();
@@ -431,7 +433,16 @@ export class Scene extends EventDispatcher{
 		return this.annotations;
 	};
 
+	getWidthAnnotations () {
+		return this.width_annotations;
+	};
+
 	removeAnnotation(annotationToRemove) {
 		this.annotations.remove(annotationToRemove);
 	}
+
+	removeWidthAnnotation(annotationToRemove) {
+		this.width_annotations.remove(annotationToRemove);
+	}
+
 };

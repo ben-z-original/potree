@@ -9,6 +9,7 @@ import {PointCloudTree} from "../PointCloudTree.js"
 import {Profile} from "../utils/Profile.js"
 import {Measure} from "../utils/Measure.js"
 import {Annotation} from "../Annotation.js"
+import {WidthAnnotation} from "../WidthAnnotation.js"
 import {CameraMode, ClipTask, ClipMethod} from "../defines.js"
 import {ScreenBoxSelectTool} from "../utils/ScreenBoxSelectTool.js"
 import {Utils} from "../utils.js"
@@ -607,6 +608,8 @@ export class Sidebar{
 			let parentID = this.annotationMapping.get(annotation.parent);
 			let annotationID = createNode(parentID, annotation.title, annotationIcon, annotation);
 			this.annotationMapping.set(annotation, annotationID);
+      if (annotation instanceof WidthAnnotation)
+        tree.jstree('hide_node', annotationID);
 
 			annotation.addEventListener("annotation_changed", (e) => {
 				let annotationsRoot = $("#jstree_scene").jstree().get_json("annotations");

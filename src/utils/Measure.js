@@ -369,7 +369,7 @@ export class Measure extends THREE.Object3D {
 				resolution:  new THREE.Vector2(1000, 1000),
 			});
 
-			lineMaterial.depthTest = false;
+			lineMaterial.depthTest = true;
 
 			let edge = new Line2(lineGeometry, lineMaterial);
 			edge.visible = true;

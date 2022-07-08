@@ -301,7 +301,7 @@ export class Viewer extends EventDispatcher{
 			this.setEDLOpacity(1.0);
 			this.setClipTask(ClipTask.HIGHLIGHT);
 			this.setClipMethod(ClipMethod.INSIDE_ANY);
-			this.setPointBudget(200000);
+			this.setPointBudget(50000);
 			this.setShowBoundingBox(false);
 			this.setFreeze(false);
 			this.setControls(this.orbitControls);
